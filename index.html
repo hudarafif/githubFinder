@@ -8,14 +8,16 @@
 <body>
     
     <h1>GitHub Repo Finder</h1>
-    <div>
-        <div>
-            <span>Select a Language</span>
-            <span>▼</span>
+    <div id="dropdown" class="dropdown">
+        <div class="drop-toggle">
+            <span class="label">Select a Language</span>
+            <span class="arrow">▼</span>
         </div>
     </div>
-    <ul>
-        <li></li>
+    <ul id="langList" class="lang-list hidden">
+        <li>python</li>
+        <li>javascript</li>
+        <li>ruby</li>
     </ul>
 
     <div id="status" class="status">Please select a language</div>
