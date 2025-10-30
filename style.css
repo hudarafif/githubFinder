@@ -1,0 +1,80 @@
+.dropdown{
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    margin-left: 20px;
+}
+
+.drop-toggle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+
+.lang-list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lang-list .nameLang{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-top: none;
+    cursor: pointer;
+    background-color: #fff;
+}
+.lang-list .nameLang:hover{
+    background-color: #f1f1f1;
+}
+
+/* .dropdown.open .nameLang{
+    display: block;
+} */
+
+.status{
+    margin-top: 20px;
+    font-size: 18px;
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+    /* text-align: center; */
+}
+
+.repo-card{
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #e3e3e3ff;
+}
+
+.repo-card h2{
+    margin: 0 0 10px 0;
+}
+
+.repo-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.stats {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #777;
+    justify-content: space-between;
+    display: flex;
+}
+
+.hidden {
+    display: none;
+}
+
+.error {
+    background-color: #ffe6e6;
+    color: red;
+    font-weight: bold;
+}

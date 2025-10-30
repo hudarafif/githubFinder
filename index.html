@@ -4,21 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitHub Repo Finder</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
     <h1>GitHub Repo Finder</h1>
     <div id="dropdown" class="dropdown">
         <div class="drop-toggle">
-            <span class="label">Select a Language</span>
+            <input type="text" id="searchInput" class="search-input"  placeholder="Select a Language"/>
             <span class="arrow">▼</span>
         </div>
+        <ul id="langList" class="lang-list hidden">
+            <!-- <li class="nameLang"></li> -->
+        </ul>
     </div>
-    <ul id="langList" class="lang-list hidden">
-        <li>python</li>
-        <li>javascript</li>
-        <li>ruby</li>
-    </ul>
 
     <div id="status" class="status">Please select a language</div>
 
@@ -34,6 +33,6 @@
 
 
 
-    <script src="index.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
