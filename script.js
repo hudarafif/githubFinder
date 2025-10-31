@@ -3,11 +3,13 @@ const langList = document.getElementById('langList');
 const searchInput = document.getElementById('searchInput');
 const statusDiv = document.getElementById('status');
 const repoCard = document.getElementById('repoCard');
+const repoLanguage = document.getElementById('repoLanguage');
 const repoName = document.getElementById('repoName');
 const repoDesc = document.getElementById('repoDesc');
 const repoStars = document.getElementById('repoStars');
 const repoForks = document.getElementById('repoForks');
 const repoIssues = document.getElementById('repoIssues');
+const refreshButton = document.getElementById('refresh');
 
 let languages = []; // Simpan list dari JSON
 
@@ -66,7 +68,7 @@ searchInput.addEventListener('input', (e) => {
 
 // Fetch repo dari GitHub
 async function fetchRepos(language) {
-  statusDiv.textContent = `Fetching ${language} repositories...`;
+  statusDiv.textContent = `Loading repositories for ${language}..., please wait.`;
   repoCard.classList.add('hidden');
 
   try {
@@ -75,13 +77,15 @@ async function fetchRepos(language) {
     if (data.items && data.items.length > 0) {
       const repo = data.items[0];
       repoName.textContent = repo.name;
+      repoLanguage.textContent = repo.language;
       repoDesc.textContent = repo.description || 'No description available.';
       repoStars.textContent = repo.stargazers_count;
       repoForks.textContent = repo.forks_count;
       repoIssues.textContent = repo.open_issues_count;
 
       repoCard.classList.remove('hidden');
-      statusDiv.textContent = `Top ${language} repository:`;
+      refreshButton.classList.remove('hidden');
+      statusDiv.textContent = ``;
     } else {
       statusDiv.textContent = `No repositories found for ${language}.`;
     }
@@ -90,3 +94,11 @@ async function fetchRepos(language) {
     console.error(error);
   }
 }
+
+// Refresh button
+refreshButton.addEventListener('click',() => {
+  const currentLang = searchInput.value.trim();
+  if (currentLang !== '') {
+    fetchRepos(currentLang);
+  }
+});

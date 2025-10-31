@@ -8,27 +8,31 @@
 </head>
 <body>
     
-    <h1>GitHub Repo Finder</h1>
-    <div id="dropdown" class="dropdown">
-        <div class="drop-toggle">
-            <input type="text" id="searchInput" class="search-input"  placeholder="Select a Language"/>
-            <span class="arrow">▼</span>
+    <div class="container">
+        <h1>GitHub Repo Finder</h1>
+        <div id="dropdown" class="dropdown">
+            <div class="drop-toggle">
+                <input type="text" id="searchInput" class="search-input"  placeholder="Select a Language"/>
+                <span class="arrow">▼</span>
+            </div>
+            <ul id="langList" class="lang-list hidden">
+                <!-- <li class="nameLang"></li> -->
+            </ul>
         </div>
-        <ul id="langList" class="lang-list hidden">
-            <!-- <li class="nameLang"></li> -->
-        </ul>
-    </div>
 
-    <div id="status" class="status">Please select a language</div>
-
-    <div id="repoCard" class="repo-card hidden">
-        <h2 id="repoName"></h2>
-        <p id="repoDesc"></p>
-        <div class="stats">
-            <span>stars:<span id="repoStars"></span></span>
-            <span>forks:<span id="repoForks"></span></span>
-            <span>issues:<span id="repoIssues"></span></span>
+        
+        <div id="status" class="status">Please select a language</div>
+        <div id="repoCard" class="repo-card hidden">
+            <h2 id="repoName"></h2>
+            <p id="repoDesc"></p>
+            <div class="stats">
+                <span>👩‍💻: <span id="repoLanguage"></span></span>
+                <span>⭐: <span id="repoStars"></span></span>
+                <span>🍴: <span id="repoForks"></span></span>
+                <span>⚠️: <span id="repoIssues"></span></span>
+            </div>
         </div>
+        <button id="refresh" class="refresh hidden">Refresh</button>
     </div>
 
 

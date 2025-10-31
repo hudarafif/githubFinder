@@ -1,3 +1,19 @@
+.container{
+    max-width: 500px;
+    margin: 10% auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #6e87daff;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    
+
+}
+
+
 .dropdown{
     position: relative;
     display: inline-block;
@@ -10,7 +26,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #000000ff;
+    border-radius: 5px;
     cursor: pointer;
     background-color: #f9f9f9;
 }
@@ -45,11 +62,10 @@
 }
 
 .repo-card{
-    border: 1px solid #ddd;
+    border: 1px solid #000000ff;
     border-radius: 5px;
     padding: 10px;
-    margin: 10px 0;
-    background-color: #e3e3e3ff;
+    background-color: #ffffffff;
 }
 
 .repo-card h2{
@@ -67,6 +83,21 @@
     color: #777;
     justify-content: space-between;
     display: flex;
+}
+
+.refresh{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    margin: 20px auto;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #000000ff;
+    color: white;
 }
 
 .hidden {
